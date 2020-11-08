@@ -1,3 +1,3 @@
-# pokedexAngular
+# pokeDexBackend
 
 
