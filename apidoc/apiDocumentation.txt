@@ -1,0 +1,95 @@
+/**
+
+  public pokeApi: any;
+
+  constructor(
+    private http: HttpClient
+  ) {
+    this.pokeApi = environment.pokemonUrl;
+  }
+
+  getPokemon(id: number, limit: number): Observable<Pokemon[]> {
+    return this.http.get<Pokemon[]>(`${this.pokeApi}?offset=${id}&limit=${limit}`);
+  }
+
+  getPokemonId(id): Observable<PokemonId> {
+    return this.http.get<PokemonId>(`${this.pokeApi}/${id}`);
+  }
+  
+   showPokemon(id) {
+    this.pokemonService
+      .getPokemonId(id)
+      .subscribe((data: PokemonId) => {
+        this.pokemon = data;
+      });
+  }
+  
+  showPokemon(id) {
+    this.pokemonService
+      .getPokemonId(id)
+      .subscribe((data: PokemonId) => {
+        this.pokemon = data;
+      });
+  }
+  
+ * @api {get} /pokemon/:id Request pokemon information
+ * @apiName GetPokemon
+ * @apiGroup pokemon
+ *
+ * @apiParam {Number} id pokemon's unique ID.
+ * @apiParam {String} name pokemon's unique name.
+ * @apiParam {String} url pokemon's unique url.
+ *
+ 
+ * @apiSuccess {number} id of the pokemon.
+ * @apiSuccess {String} name of the pokemon.
+ * @apiSuccess {String} url of the pokemon.
+ 
+  Description: Read data of a pokemon 
+ 
+  * @api {post} /pokemon/:id Request pokemon information
+ * @apiName GetPokemon
+ * @apiGroup pokemon
+ *
+ * @apiParam {Number} id pokemon's unique ID.
+ * @apiParam {String} name pokemon's unique name.
+ * @apiParam {String} url pokemon's unique url.
+ *
+ 
+ * @apiSuccess {number} id of the pokemon.
+ * @apiSuccess {String} name of the pokemon.
+ * @apiSuccess {String} url of the pokemon.
+ 
+  Description: creates a new pokemon
+ 
+  * @api {Put} /pokemon/:id Request pokemon information
+ * @apiName GetPokemon
+ * @apiGroup pokemon
+ *
+ * @apiParam {Number} id pokemon's unique ID.
+ * @apiParam {String} name pokemon's unique name.
+ * @apiParam {String} url pokemon's unique url.
+ *
+ 
+ * @apiSuccess {number} id of the pokemon.
+ * @apiSuccess {String} name of the pokemon.
+ * @apiSuccess {String} url of the pokemon.
+ 
+ Description: Changes the selected pokemons parameter/s in the database  
+ 
+ * @api {Del} /pokemon/:id Request pokemon information
+ * @apiName DelPokemon
+ * @apiGroup pokemon
+ *
+ * @apiParam {Number} id pokemon's unique ID.
+ * @apiParam {String} name pokemon's unique name.
+ * @apiParam {String} url pokemon's unique url.
+ *
+ 
+ * @apiSuccess {number} id of the pokemon.
+ * @apiSuccess {String} name of the pokemon.
+ * @apiSuccess {String} url of the pokemon.
+ 
+ Description: removes the selected pokemon from database 
+ 
+ */
