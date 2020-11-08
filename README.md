@@ -6,4 +6,6 @@ Install & Open
 
 2. npm open
 
-Api & Database: https://pokeapi.co/api/v2/pokemon
+Api: https://pokeapi.co/api/v2/pokemon
+
+DataBase:
