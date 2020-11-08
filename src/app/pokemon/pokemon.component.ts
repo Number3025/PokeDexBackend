@@ -14,7 +14,7 @@ export class PokemonComponent implements OnInit {
   public sub: any;
   public query: string;
   public offset: number = 0;
-  public limit: number = 20;
+  public limit: number = 80;
 
   constructor(
     private readonly pokemonService: PokemonService
