@@ -8,4 +8,6 @@ Install & Open
 
 Api: https://pokeapi.co/api/v2/pokemon
 
-DataBase:
+DataBase Mongodb
+
+File exported from database: https://drive.google.com/file/d/1aYUTGGNrsg0VnDs-sX8zdAU3xMJkp3Hq/view?usp=sharing
